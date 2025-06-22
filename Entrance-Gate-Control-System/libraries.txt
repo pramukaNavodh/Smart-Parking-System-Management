@@ -1,0 +1,10 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+107-Arduino-Servo-RP2040
+ESP32Servo
+NewPing
+Keypad
+Firebase ESP32 Client
+LiquidCrystal I2C
+Time
