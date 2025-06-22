@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 240, "left": -187.16, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 97.5, "left": 168.7, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 140.4,
+      "left": 416.6,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 140.4,
+      "left": 368.6,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic2", "top": 107.1, "left": -656.9, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 150,
+      "left": -399.4,
+      "attrs": { "color": "limegreen" }
+    },
+    { "type": "wokwi-led", "id": "led4", "top": 150, "left": -447.4, "attrs": { "color": "red" } },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic3", "top": 558.3, "left": -666.5, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 591.6,
+      "left": -409,
+      "attrs": { "color": "limegreen" }
+    },
+    { "type": "wokwi-led", "id": "led6", "top": 591.6, "left": -457, "attrs": { "color": "red" } },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic4", "top": 548.7, "left": 168.7, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": 582,
+      "left": 426.2,
+      "attrs": { "color": "limegreen" }
+    },
+    { "type": "wokwi-led", "id": "led8", "top": 582, "left": 378.2, "attrs": { "color": "red" } },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic5", "top": -180.9, "left": -234.5, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led9",
+      "top": -128.4,
+      "left": 13.4,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led10",
+      "top": -128.4,
+      "left": -34.6,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "ultrasonic1:GND", "black", [ "h19.2", "v-48", "h337.2" ] ],
+    [ "esp:GND.2", "led2:C", "black", [ "h19.2", "v-48", "h450.8" ] ],
+    [ "esp:GND.2", "led1:C", "black", [ "h19.2", "v-48", "h498.8" ] ],
+    [ "esp:GND.2", "ultrasonic4:GND", "black", [ "h19.2", "v412.8", "h337.2" ] ],
+    [ "esp:GND.2", "led8:C", "black", [ "h19.2", "v412.8", "h460.4" ] ],
+    [ "esp:GND.2", "led7:C", "black", [ "h19.2", "v412.8", "h508.4" ] ],
+    [ "esp:GND.2", "ultrasonic5:GND", "black", [ "h19.2", "v-297.6", "h-66" ] ],
+    [ "esp:GND.2", "led10:C", "black", [ "h19.2", "v-297.6", "h47.6" ] ],
+    [ "esp:GND.2", "led9:C", "black", [ "h19.2", "v-297.6", "h95.6" ] ],
+    [ "esp:GND.2", "led5:C", "black", [ "h19.2", "v412.8", "h-326.8" ] ],
+    [ "esp:GND.2", "led6:C", "black", [ "h19.2", "v412.8", "h-374.8" ] ],
+    [ "esp:GND.2", "ultrasonic3:GND", "black", [ "h19.2", "v412.8", "h-498" ] ],
+    [ "esp:GND.2", "ultrasonic2:GND", "black", [ "h19.2", "v-48", "h-488.4" ] ],
+    [ "esp:GND.2", "led4:C", "black", [ "h19.2", "v-48", "h-365.2" ] ],
+    [ "esp:GND.2", "led3:C", "black", [ "h19.2", "v-48", "h-317.2" ] ],
+    [ "esp:3V3", "ultrasonic2:VCC", "white", [ "h-278.25" ] ],
+    [ "esp:3V3", "ultrasonic5:VCC", "white", [ "h-19.05", "v-297.6", "h38.4" ] ],
+    [ "esp:3V3", "ultrasonic1:VCC", "white", [ "h-19.05", "v-38.4", "h441.6" ] ],
+    [ "esp:3V3", "ultrasonic3:VCC", "white", [ "h-19.05", "v441.6", "h-393.6" ] ],
+    [ "esp:3V3", "ultrasonic4:VCC", "white", [ "h-19.05", "v-38.4", "h182.1", "v412.8" ] ],
+    [ "esp:16", "ultrasonic1:TRIG", "gold", [ "h28.8", "v-134.4", "h307.6" ] ],
+    [ "esp:17", "ultrasonic1:ECHO", "blue", [ "h38.4", "v-115.2", "h308" ] ],
+    [ "esp:18", "led2:A", "red", [ "h48", "v-86.4", "h432" ] ],
+    [ "esp:19", "led1:A", "green", [ "h57.6", "v-67.2", "h470.4" ] ],
+    [ "esp:21", "ultrasonic5:TRIG", "yellow", [ "h28.8", "v-326.4", "h-95.6" ] ],
+    [ "esp:22", "ultrasonic5:ECHO", "blue", [ "h38.4", "v-307.2", "h-95.2" ] ],
+    [ "esp:23", "led10:A", "red", [ "h48", "v-297.6", "h28.8" ] ],
+    [ "esp:25", "led9:A", "green", [ "h-28.65", "v-134.4", "h182.1", "v-220.8", "h67.5" ] ],
+    [ "esp:26", "ultrasonic2:TRIG", "gold", [ "h-38.25", "v-76.8", "h-355.5", "v-76.8" ] ],
+    [ "esp:27", "ultrasonic2:ECHO", "blue", [ "h-47.85", "v-76.8", "h-335.2" ] ],
+    [ "esp:32", "led4:A", "red", [ "h-57.45", "v-28.8", "h-182.4" ] ],
+    [ "esp:33", "led3:A", "green", [ "h-28.65", "v-76.8", "h-163.2" ] ],
+    [ "esp:4", "ultrasonic4:TRIG", "gold", [ "h28.8", "v268.8", "h307.6" ] ],
+    [ "esp:2", "ultrasonic4:ECHO", "blue", [ "h38.4", "v259.2", "h308" ] ],
+    [ "esp:12", "led8:A", "red", [ "h-57.45", "v288", "h643.2" ] ],
+    [ "esp:13", "led7:A", "green", [ "h-28.65", "v288", "h662.4" ] ],
+    [ "esp:14", "ultrasonic3:TRIG", "gold", [ "h-38.25", "v326.4", "h-364.4" ] ],
+    [ "esp:34", "ultrasonic3:ECHO", "blue", [ "h-47.85", "v412.8", "h-344.8" ] ],
+    [ "esp:35", "led5:A", "green", [ "h-28.65", "v374.4", "h-172.8" ] ],
+    [ "esp:15", "led6:A", "red", [ "h48", "v259.2", "h-393.6" ] ]
+  ],
+  "dependencies": {}
+}
